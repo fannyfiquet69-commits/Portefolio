@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+   
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mon portfolio</title>
+        <meta type="description" content="Mon portfolio de technicienne vidéo">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="styles/styles.css" type="text/css">
+        <link rel="icon" href="data:,">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    </head>   
+
+    <body>
+        <header>
+            <div class="boxed">
+                <div class="flex aligncenter space-between">
+                    <a href="/" class="header-logo">
+                        <img src="img/logo.png">
+                    </a>
+                    <ul class="header-menu">
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#skills">Compétences</a></li>
+                        <li class="dropdown">
+                            <a href="#projects" id="menu-projects"> Réalisations</a>
+                            <ul class="submenu">
+                                <li><a href="#projects" id="submenu-photos">Photos</a></li>
+                                <li><a href="#drone" id="submenu-drone">Drone</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+
+        <div class="slider" id="home">
+            <img src="img/slider.png" class="slider-background">
+            <div class="slider-content">
+                <h1>Fanny FIQUET</h1>
+                <p>Technicienne vidéo passionnée et créative.</p>
+            </div>  
+        </div>
+         
+        <div class="section" id="about"> 
+             <div class="boxed">
+                <div class="flex">
+                    <div class="w40">
+                        <h2>À propos de moi</h2>
+
+                    </div>
+                    <div class="w60">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+       
+        <div class="section dark" id="skills"> 
+             <div class="boxed text-center">
+                <h2>Découvrez mes compétences</h2>
+
+                <div class="flex gap20">
+
+                    <div class ="w25 skill">
+                        <img src="img/photoshop.png">
+                        <h3>PHOTOSHOP</h3>   
+                    </div>
+
+                    <div class ="w25 skill">
+                        <img src="img/lightroom.png">
+                        <h3>LIGHTROOM</h3>   
+                    </div>
+
+                    <div class ="w25 skill">
+                        <img src="img/after-effect.png">
+                        <h3>AFTER EFFECT</h3>   
+                    </div>
+                    <div class ="w25 skill">
+                        <img src="img/Millumin-logo.jpg">
+                        <h3>MILLUMIN</h3>   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="projects"> 
+             <div class="boxed text-center">
+                <h2>Mes réalisations photos</h2>
+                <div class="flex wrap gap20 space-between">
+                    <div class="w32 realisation" onclick="openCarousel('2026')">
+                       <img src="img/2026/soleil-2026.jpg">
+                       <h3>2026</h3> 
+                    </div>
+                    <div class="w32 realisation" onclick="openCarousel('2025')">
+                            <img src="img/2025/puydufou-2025.JPG">
+                            <h3>2025</h3>
+                    </div>
+                    <div class="w32 realisation" onclick="openCarousel('2024')">
+                            <img src="img/2024/concert-2024.jpg">
+                            <h3>2024</h3>
+                    </div>
+                    <div class="w32 realisation" onclick="openCarousel('2023')">
+                            <img src="img/2023/erwan-2023.jpg">
+                            <h3>2023</h3>
+                    </div>
+                    <div class="w32 realisation" onclick="openCarousel('2022')">
+                            <img src="img/2022/rallye-2022.jpg">
+                            <h3>2022</h3>
+                    </div>
+                    <div class="w32 realisation" onclick="openCarousel('2021')">
+                            <img src="img/2021/agathe-2021.JPG">
+                            <h3>2021</h3>
+                    </div>
+                </div>
+             </div>
+        </div>
+        <div class="modal" id="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeCarousel()">
+            ✕
+        </span>
+
+        <h2 id="carousel-title"></h2>
+
+        <div class="swiper mySwiper">
+
+            <div class="swiper-wrapper" id="swiperWrapper"></div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+            <div id="slide-counter"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+        <hr class="separator">
+
+       <div class="section" id="drone"> 
+    <div class="boxed text-center">
+        <h2>Mes réalisations drone</h2>
+
+        <div class="flex wrap gap20 video space-between">
+
+            <!-- Photos drone -->
+            <div class="w48 realisation" onclick="openDroneCarousel('photos')">
+     
+                <img src="img/Drone/imgdrone.JPG">
+                <h3>Photos</h3>
+         
+            </div>
+
+            <!-- Vidéos drone -->
+            <div class="w48 realisation"
+                 onclick="openDroneCarousel('videos')">
+
+                <video autoplay muted loop>
+                    <source src="video/drone-1.MP4" type="video/mp4">
+                </video>
+
+                <h3>Vidéos</h3>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+        <div class="section dark" id="contact"> 
+             <div class="boxed text-center">
+                <h2>Contactez-moi</h2>
+                <div class="flex space-between">
+                    <div class="w25 contact">
+                        <span class="material-symbols-outlined icon">mail</span>
+                        <span class="label">E-mail</span>
+                        <a href="mailto:fannyfiquet69@gmail.com?subject=Contact%20depuis%20mon%20portfolio">
+                        <span class="value">fannyfiquet69@gmail.com</span>
+                    </a>
+                    </div>
+                    <div class="w25 contact">
+                        <span class="material-symbols-outlined icon">call</span>
+                        <span class="label">Téléphone</span>
+                        <span class="value">07 81 33 91 88</span>
+                    </div>
+                    <div class="w25 contact">
+                        <i class="fa-brands fa-linkedin icon"></i>
+                        <span class="label">LinkedIn</span>
+                        <a href="https://linkedin.com/in/fanny-fiquet-a507951a7" target="_blank">
+                        <span class="value">Fanny Fiquet</span>
+                        </a>
+                    </div>
+                    <div class="w25 contact">
+                        <i class="fa-brands fa-instagram icon"></i>
+                        <span class="label">Instagram</span>
+                        <a href="https://instagram.com/fy_fqt" target="_blank" rel="noopener noreferrer">
+                        <span class="value">@fy_fqt</span>
+                        </a>
+                    </div>
+                </div>
+             </div>
+        </div>
+
+
+    </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</html>
