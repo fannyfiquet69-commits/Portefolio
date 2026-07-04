@@ -126,7 +126,7 @@ const droneGalleries = {
 
     videos: [
         "video/drone-1.mp4",
-        "videos/drone-2.mp4"
+        "video/drone-2.mp4"
     ]
 
 };
@@ -199,7 +199,7 @@ function openDroneCarousel(type) {
     document.getElementById("modal").classList.add("active");
 
     document.getElementById("carousel-title").innerText =
-        type === "photos" ? "Drone - Photos" : "Drone - Vidéos";
+        type === "photos" ? "Drone - Photos" : "Drone - Videos";
 
     const wrapper = document.getElementById("swiperWrapper");
 

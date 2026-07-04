@@ -195,7 +195,7 @@ p{
 .modal{
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,0.95);
+    background:rgba(142, 135, 135, 0.95);
     backdrop-filter: blur(10px);
     display:none;
     justify-content:center;
