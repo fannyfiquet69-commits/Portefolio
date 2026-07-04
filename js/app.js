@@ -125,8 +125,9 @@ const droneGalleries = {
     ],
 
     videos: [
-        "video/drone-1.MP4",
-        "video/drone-2.MP4"
+        "video/DRONE-1.MP4",
+        "video/DRONE-2.MP4",
+        "video/DRONE-2.MP4"
     ]
 
 };
